@@ -7,10 +7,6 @@
 - Winodws 10
 - 
 ## Sequence to start laravel 5.2 project
-1. Configの設定
-
-
-
 1. Config設定
 ```
 Config/app.php
