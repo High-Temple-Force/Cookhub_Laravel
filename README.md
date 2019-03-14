@@ -75,4 +75,7 @@ Make controller
 $ php artisan make:controller RequController
 
 app/Http/Controllers/RequController
+
+Routing
+app/Http/routes.php
 ```
