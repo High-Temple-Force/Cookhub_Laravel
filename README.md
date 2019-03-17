@@ -79,3 +79,10 @@ app/Http/Controllers/RequController
 Routing
 app/Http/routes.php
 ```
+
+### 6. Validation 
+```
+Make views
+Make Controller
+Make routeing
+```
