@@ -30,7 +30,24 @@
         <dd>
         <input type="text" name="mail" />
         @if($errors->has('mail')) <br><span class="error">{{ $errors->first('mail') }}</span>@endif
-        </dd></dl>
+        </dd>
+        </dl>
+
+        <dl>
+        <dt>年齢:</dt>
+        <dd>
+        <input type="text" name="age" />歳
+        @if($errors->has('age')) <br><span class="error">{{ $errors->first('age') }}</span>@endif
+        </dd>
+        </dl>
+
+        <dl>
+        <dt>ご意見ご乾燥:</dt>
+        <dd>
+        <textarea name="opinion" cols="40" rows="8"></textarea>
+        @if($errors->has('opinion')) <br> <span class="error">{{ $errors->first('opinion') }}</span>@endif
+        </dd>
+        </dl>
 
     </form>
 </body>
