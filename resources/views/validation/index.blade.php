@@ -42,12 +42,16 @@
         </dl>
 
         <dl>
-        <dt>ご意見ご乾燥:</dt>
+        <dt>ご意見ご感想:</dt>
         <dd>
         <textarea name="opinion" cols="40" rows="8"></textarea>
         @if($errors->has('opinion')) <br> <span class="error">{{ $errors->first('opinion') }}</span>@endif
         </dd>
         </dl>
+
+        <div>
+        <input type="submit" name="button1" value="送信"/></div>
+        <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
     </form>
 </body>
