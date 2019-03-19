@@ -17,12 +17,13 @@ Route::get('/', function () {
 
 # Input view
 Route::get('request/', [
-    'uses' => 'RequController@getIndex',
-    'as' => 'request.index'
+    'uses' => 'InsertController@getIndex',
+    'as' => 'insert.index'
 ]);
 
 # Confirm view
 Route::post('request/confirm', [
-    'uses' => 'RequController@confirm',
-    'as' => 'request.confirm'
+    'uses' => 'InsertController@confirm',
+    'as' => 'insert.confirm'
 ]);
+
