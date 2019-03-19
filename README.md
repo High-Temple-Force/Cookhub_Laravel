@@ -5,7 +5,14 @@
 
 ## Env
 - Winodws 10
-- 
+
+## Initialize
+```
+$ composer install
+# 各ライブラリのInstall
+$ composer update
+# 各ライブラリ、ファイルを最新版にアップデート
+```
 ## Sequence to start laravel 5.2 project
 ### 1. Config設定
 ```
