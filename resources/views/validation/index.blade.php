@@ -20,7 +20,7 @@
         <dl>
         <dt>名前：</dt>
         <dd>
-        <input type="text" name="username" />
+        <input type="text" name="username" value="{{ old('username') }}"/>
         @if($errors->has('username')) <br><span class="error">{{ $errors->first('username') }}</span>@endif
         </dd>
         </dl>
@@ -28,7 +28,7 @@
         <dl>
         <dt>Email:</dt>
         <dd>
-        <input type="text" name="mail" />
+        <input type="text" name="mail" value="{{ old('mail') }}"/>
         @if($errors->has('mail')) <br><span class="error">{{ $errors->first('mail') }}</span>@endif
         </dd>
         </dl>
@@ -36,7 +36,7 @@
         <dl>
         <dt>年齢:</dt>
         <dd>
-        <input type="text" name="age" />歳
+        <input type="text" name="age" value="{{ old('age') }}" />歳
         @if($errors->has('age')) <br><span class="error">{{ $errors->first('age') }}</span>@endif
         </dd>
         </dl>
@@ -44,7 +44,7 @@
         <dl>
         <dt>ご意見ご感想:</dt>
         <dd>
-        <textarea name="opinion" cols="40" rows="8"></textarea>
+        <textarea name="opinion" cols="40" rows="8">{{ old('opinion') }}</textarea>
         @if($errors->has('opinion')) <br> <span class="error">{{ $errors->first('opinion') }}</span>@endif
         </dd>
         </dl>

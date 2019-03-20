@@ -26,3 +26,14 @@ Route::post('request/confirm', [
     'uses' => 'RequController@confirm',
     'as' => 'request.confirm'
 ]);
+
+# input view
+Route::get('validation/', [
+    'uses' => 'ValiController@getIndex',
+    'as'=>'validation.index'
+]);
+# confirm view
+Route::post('validation/confirm',[
+    'uses'=> 'ValiController@confirm',
+    'as'=>'validation.confirm'
+]);
