@@ -27,3 +27,8 @@ Route::post('request/confirm', [
     'as' => 'insert.confirm'
 ]);
 
+# finisi
+Route::post('insert/finish', [
+    'uses' => 'InsertController@finish',
+    'as' => 'insert.finish'
+]);
