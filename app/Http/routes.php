@@ -35,3 +35,7 @@ Route::post('insert/finish', [
 
 
 Route::get('student/list','StudentController@getIndex');
+
+Route::get('foo', function () {
+    return 'Foll!';
+});
