@@ -32,3 +32,6 @@ Route::post('insert/finish', [
     'uses' => 'InsertController@finish',
     'as' => 'insert.finish'
 ]);
+
+
+Route::get('student/list','StudentController@getIndex');

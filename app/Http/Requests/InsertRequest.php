@@ -1,3 +1,12 @@
+<?php
+
+namespace App\Http\Requests;
+
+use Illuminate\Foundation\Http\FormRequest;
+
+abstract class InsertRequest extends FormRequest
+{
+    
 public function rules()
 {
     return [
@@ -14,4 +23,6 @@ public function messages()
     'email'=>'メールアドレスの形式で入力してください。',
     'numeric'=>'数値で入力してください。',
     ];
+}
+
 }
