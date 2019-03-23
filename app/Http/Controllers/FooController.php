@@ -28,7 +28,15 @@ class FooController extends Controller
         $user = Student::where('name', '川端　康成')->first();
         $users = Student::all();
         return view('foo.foo3', [
-            'user' => $user
+            'user' => $users
+        ]);
+    }
+
+    public function foo4()
+    {
+        return view('foo.foo4', [
+            'title'=>'FOo4',
+            'body' => 'Hello'
         ]);
     }
 }
