@@ -35,7 +35,7 @@ set db config
 # Root user login
 $ mysql -u root 
 
-# Create db
+# Create db * Use mysql 5.* for laravel
 $ create database cookhub_db;
 $ create user cookhub_user@localhost identified by 'secret';
 $ grant all on cookhub_db.* to  cokhub_user@localhost identified by 'secret';
@@ -92,4 +92,17 @@ app/Http/routes.php
 Make views
 Make Controller
 Make routeing
+```
+
+### 7. Form to DB by POST
+```
+
+```
+
+### 8. seeder(making studens)
+```
+$ php artisan make:migration students --create=students
+$ php artisan make:model Student
+$ php artisan make:seed StudentsTableSeeder
+$ php artisan db:seed
 ```

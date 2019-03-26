@@ -1,0 +1,33 @@
+<?php
+
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+class CreateWorkers extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('workers', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('username')->comment('名前');
+            $table->string('mail')->comment('メール');
+            $table->integer('age')->comment('年齢');
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::drop('workers');
+    }
+}

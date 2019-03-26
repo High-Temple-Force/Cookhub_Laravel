@@ -17,23 +17,27 @@ Route::get('/', function () {
 
 # Input view
 Route::get('request/', [
-    'uses' => 'RequController@getIndex',
-    'as' => 'request.index'
+    'uses' => 'InsertController@getIndex',
+    'as' => 'insert.index'
 ]);
 
 # Confirm view
 Route::post('request/confirm', [
-    'uses' => 'RequController@confirm',
-    'as' => 'request.confirm'
+    'uses' => 'InsertController@confirm',
+    'as' => 'insert.confirm'
 ]);
 
-# input view
-Route::get('validation/', [
-    'uses' => 'ValiController@getIndex',
-    'as'=>'validation.index'
+
+# finisi
+Route::post('insert/finish', [
+    'uses' => 'InsertController@finish',
+    'as' => 'insert.finish'
 ]);
-# confirm view
-Route::post('validation/confirm',[
-    'uses'=> 'ValiController@confirm',
-    'as'=>'validation.confirm'
-]);
+
+
+Route::get('student/list','StudentController@getIndex');
+
+Route::get('foo', function () {
+    return 'Foll!';
+});
+
