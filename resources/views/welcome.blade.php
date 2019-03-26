@@ -4,7 +4,7 @@
         <title>Laravel</title>
 
         <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
-
+        <link rel="stylesheet" href="{{ asset('/css/app.css') }}">
         <style>
             html, body {
                 height: 100%;
@@ -41,5 +41,9 @@
                 <div class="title">Laravel 5</div>
             </div>
         </div>
+        <div id="app">
+            <example-component></example-component>
+        </div>
+        <script src=" {{ asset('js/app.js') }} "></script>
     </body>
 </html>
