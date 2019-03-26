@@ -27,6 +27,7 @@ Route::post('request/confirm', [
     'as' => 'insert.confirm'
 ]);
 
+
 # finisi
 Route::post('insert/finish', [
     'uses' => 'InsertController@finish',
@@ -39,3 +40,4 @@ Route::get('student/list','StudentController@getIndex');
 Route::get('foo', function () {
     return 'Foll!';
 });
+
