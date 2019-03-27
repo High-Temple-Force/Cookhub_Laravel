@@ -11,35 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-# Input view
-Route::get('request/', [
-    'uses' => 'InsertController@getIndex',
-    'as' => 'insert.index'
-]);
-
-# Confirm view
-Route::post('request/confirm', [
-    'uses' => 'InsertController@confirm',
-    'as' => 'insert.confirm'
-]);
-
-
-# finisi
-Route::post('insert/finish', [
-    'uses' => 'InsertController@finish',
-    'as' => 'insert.finish'
-]);
 
 
 Route::get('student/list','StudentController@getIndex');
 
-Route::get('foo', function () {
-    return 'Foll!';
-});
 
 
 Route::get('foo/foo1', 'FooController@foo1');

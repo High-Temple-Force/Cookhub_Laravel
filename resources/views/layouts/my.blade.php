@@ -51,7 +51,7 @@
                                         <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                                     </li>
                                 
-                                
+                                @else
                                     {{-- 「プロフィール」と「ログアウト」のドロップダウンメニュー --}}
                                     <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" href="#" id="dropdown-user" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
