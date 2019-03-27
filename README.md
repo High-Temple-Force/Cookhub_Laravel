@@ -99,10 +99,15 @@ Make routeing
 
 ```
 
-### 8. seeder(making studens)
+### 8. seeder(making testdata as well)
 ```
+$ php artisan make:factory PostFactory --model=Post
+$ php artisan make:factory CommentFactory --model=Comment
 $ php artisan make:migration students --create=students
 $ php artisan make:model Student
 $ php artisan make:seed StudentsTableSeeder
 $ php artisan db:seed
 ```
+
+### Tips
+1. composer dump-autoload => Make ClassMap
