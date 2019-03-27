@@ -1,5 +1,7 @@
 <?php
 
+use Symfony\Component\Routing\Annotation\Route;
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -11,7 +13,7 @@
 |
 */
 
-
+Route::get('/', 'PostController@index')->name('id');
 
 Route::get('student/list','StudentController@getIndex');
 
