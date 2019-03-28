@@ -13,7 +13,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'PostsController@index')->name('top');
-Route::resource('posts', 'PostsController', ['only' => ['create', 'store', 'show']]);
+Route::resource('posts', 'PostsController', ['only' => ['create', 'store', 'show', 'edit', 'update', 'destroy']]);
+Route::resource('comments', 'CommentsController', ['only' => ['store']]);
 
 Route::get('student/list','StudentController@getIndex');
 
