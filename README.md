@@ -84,7 +84,7 @@ $ php artisan make:controller RequController
 app/Http/Controllers/RequController
 
 Routing
-app/Http/routes.php
+routes/web.php
 ```
 
 ### 6. Validation 
@@ -105,6 +105,7 @@ $ php artisan make:factory PostFactory --model=Post
 $ php artisan make:factory CommentFactory --model=Comment
 $ php artisan make:model 
 $ php artisan make:seed XXX
+Edit DatabaseSeeder File 
 $ php artisan db:seed
 ```
 
