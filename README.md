@@ -110,5 +110,6 @@ $ php artisan db:seed
 ```
 
 ### Tips
-1. composer dump-autoload => Make ClassMap
+1. When Seeding does not work well....
+   composer dump-autoload => Make ClassMap
 2. 
