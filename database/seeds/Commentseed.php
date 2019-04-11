@@ -17,4 +17,3 @@ class Commentseed extends Seeder
         ]);
     }
 }
-Illuminate\Foundation\Support\Providers\EventServiceProvider::boot();

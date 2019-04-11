@@ -10,4 +10,8 @@ class Tag extends Model
     protected $fillable = [
         'tagname',
     ];
+
+    public function post() {
+        $this->belongsTo(\App\Post);
+    }
 }
