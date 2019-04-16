@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post;
-    /*
+
 
 class TagController extends Controller
 {
@@ -21,4 +21,4 @@ class TagController extends Controller
     }
     
 }
-*/
+

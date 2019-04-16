@@ -8,7 +8,6 @@ use App\Http\Requests;
 
 class InsertController extends Controller
 {
-    //
     public function getIndex()
     {
         return view('insert.index');

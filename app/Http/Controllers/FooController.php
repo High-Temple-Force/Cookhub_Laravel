@@ -13,7 +13,6 @@ class FooController extends Controller
     {
         return 'foo1!';
     }
-    //
 
     public function foo2()
     {

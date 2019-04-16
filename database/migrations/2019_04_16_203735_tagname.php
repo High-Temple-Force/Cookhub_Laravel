@@ -13,7 +13,6 @@ class Tagname extends Migration
      */
     public function up()
     {
-        //
         Schema::table('tags', function (Blueprint $table) {
             $table->renameColumn('id', 'tags_id');
         });
@@ -26,6 +25,5 @@ class Tagname extends Migration
      */
     public function down()
     {
-        //
     }
 }
