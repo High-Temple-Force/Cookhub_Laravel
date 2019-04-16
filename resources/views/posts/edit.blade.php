@@ -47,25 +47,7 @@
                             </div>
                         @endif
                     </div>
-                    <!--
-                    <div class="form-group">
-                        <label for="body">
-                            タグ
-                        </label>
-
-                        <textarea
-                            id="body"
-                            name="hody"
-                            class="form-control {{ $errors->has('body') ? 'is-invalid' : '' }}"
-                            rows="1"
-                        >{{ old('hody') ?: $post->hody }}</textarea>
-                        @if ($errors->has('hody'))
-                            <div class="invalid-feedback">
-                                {{ $errors->first('body') }}
-                            </div>
-                        @endif
-                    </div>
-                    -->
+        
                     <div class="mt-5">
                         <a class="btn btn-secondary" href="{{ route('posts.show', ['post' => $post]) }}">
                             キャンセル

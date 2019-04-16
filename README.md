@@ -109,6 +109,23 @@ Edit DatabaseSeeder File
 $ php artisan db:seed
 ```
 
+### 9. Make interamideate db
+change type of column, or name of column
+1. Firstly, install library
+```
+$ composer require doctrine/dbal
+```
+2. Secondly, Make migration file to upgrade defintion of existing columns
+```php
+Schema::table('posts_tags', function (Blueprint $table) {
+            $table->foreign('posts_id')->references('id')->on('posts')->onDelete('cascade');
+            $table->foreign('tags_id')->references('id')->on('tags')->onDelete('cascade');
+        });
+Schema::table('tags', function (Blueprint $table) {
+            $table->renameColumn('id', 'tags_id');
+      });
+```
+
 ### Tips
 1. When Seeding does not work well....
    composer dump-autoload => Make ClassMap
