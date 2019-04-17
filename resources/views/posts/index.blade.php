@@ -7,7 +7,7 @@
         </a>
     </div>
     <div class="container mt-4">
-        @foreach (array_map(null, $posts, $tags) as [$post, $tag])
+        @foreach ($posts as $post)
             <div class="card mb-4">
                 <div class="card-header">
                     {{ $post->title }}
@@ -30,10 +30,6 @@
                             コメント {{ $post->comments->count() }}件
                         </span>　
                     @endif
-
-                    <span class="mr-2">
-                        タグ {{ $tag }}
-                    </span>
 
                 </div>
             </div>
