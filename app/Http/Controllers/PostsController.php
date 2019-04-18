@@ -5,15 +5,17 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Post;
 use Illuminate\Support\Facades\DB;
+use App\Tag;
 
 class PostsController extends Controller
 {
-    //
     public function index()
     {
         $posts = Post::with(['comments'])->orderBy('created_at', 'desc')->paginate(10);
+        $tags = Tag::all();
         return view('posts.index', [
             'posts' => $posts,
+            'tags' => $tags
             ]);
     }
 
@@ -54,10 +56,8 @@ class PostsController extends Controller
             'title' => 'required|max:50',
             'hody'=> 'required|max:2000',
         ]);
-
         $post = Post::findOrFail($post_id);
         $post->fill($params)->save();
-
         return redirect()->route('posts.show', ['post' => $post]);
     }
 
