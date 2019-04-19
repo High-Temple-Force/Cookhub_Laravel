@@ -7,9 +7,6 @@
         </a>
     </div>
     <div class="container mt-4">
-        @foreach ($tags as $item)
-        {{ $item->tagname }}
-        @endforeach
         @foreach ($posts as $post)
             <div class="card mb-4">
                 <div class="card-header">

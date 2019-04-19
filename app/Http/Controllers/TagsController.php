@@ -14,7 +14,7 @@ class TagController extends Controller
             'id' => 'required|exists:posts,id',
             'tagname' => 'required|max:20',
         ]);
-        $post = Post::findOrFail($params['post_id']);
+        $post = Post::findOrFail($params['posts_id']);
         $post->tags()->create($params);
 
         return redirect()->route('posts.show', ['post' => $post]);
