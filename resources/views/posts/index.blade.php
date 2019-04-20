@@ -30,6 +30,10 @@
                             コメント {{ $post->comments->count() }}件
                         </span>　
                     @endif
+                    @foreach ($post->tags as $tag)
+                        <span class="mr-2">{{ $tag->pivot->tagnames }} </span>
+                        
+                    @endforeach
 
                 </div>
             </div>

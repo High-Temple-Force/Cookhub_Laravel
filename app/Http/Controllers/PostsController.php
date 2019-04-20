@@ -12,10 +12,8 @@ class PostsController extends Controller
     public function index()
     {
         $posts = Post::with(['comments'])->orderBy('created_at', 'desc')->paginate(10);
-        $tags = Tag::all();
         return view('posts.index', [
             'posts' => $posts,
-            'tags' => $tags
             ]);
     }
 
@@ -33,7 +31,7 @@ class PostsController extends Controller
             'title' => 'required|max:50',
             'hody' => 'required|max:200',
         ]);
-        Post::create($params);
+        Post::create($params)->tags()->attach($request->tags);
         return redirect()->route('top');
     }
 

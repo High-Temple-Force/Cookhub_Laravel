@@ -129,4 +129,8 @@ Schema::table('tags', function (Blueprint $table) {
 ### Tips
 1. When Seeding does not work well....
    composer dump-autoload => Make ClassMap
-2. jQuery....See create.blade
+2. jQuery....See create.blade 
+3. Tinker... Debugging toot for Laravel.
+```
+$ composer require laravel/tinker
+```

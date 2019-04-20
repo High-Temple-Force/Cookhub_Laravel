@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Tagcolumns extends Migration
+class Changecolumnsname extends Migration
 {
     /**
      * Run the migrations.
@@ -14,10 +14,14 @@ class Tagcolumns extends Migration
     public function up()
     {
         //
-        Schema::table('tags', function (Blueprint $table) {
-            $table->renameColumn('tags_id', 'id');
+        
+        Schema::table('posts', function (Blueprint $table) {
+            $table->renameColumn('posts_id', 'id');
         });
     }
+
+
+
 
     /**
      * Reverse the migrations.

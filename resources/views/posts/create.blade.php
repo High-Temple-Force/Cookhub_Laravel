@@ -42,17 +42,24 @@
                             </div>
                         @endif
                     </div>
-                    <script type="text/javascript">
-                    $(document).ready(function() {
-                            $('.js-example-basic-multiple').select2();
-                        });</script>
-                        <select class="js-example-basic-multiple" name="states[]" multiple="multiple" style="width:50%;">
-                            @foreach ($tags as $tag)
-                            <option value="{{ $tag->tags_id }}">{{ $tag->tagname }}</option>
-                            @endforeach
-                          </select>
-                    
 
+                    <div class="form-group">
+                        <label for="tags">
+                            タグ
+                        </label>
+                        <div >
+                            <script type="text/javascript">
+                                $(document).ready(function() {
+                                        $('.js-example-basic-multiple').select2();
+                                });
+                            </script>
+                            <select class="js-example-basic-multiple form-controll" name="tags[]" multiple="multiple" style="width:50%;">
+                                @foreach ($tags as $tag)
+                                <option value="{{ $tag->tags_id }}">{{ $tag->tagname }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                    </div>
                     <div class="mt-5">
                         <a href="{{ route('top') }}">
                             キャンセル
