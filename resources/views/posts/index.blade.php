@@ -30,7 +30,7 @@
                             コメント {{ $post->comments->count() }}件
                         </span>　
                     @endif
-                    {{ $post->tags->count()}}
+              
 
                 </div>
             </div>
