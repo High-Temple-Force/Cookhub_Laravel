@@ -11,14 +11,7 @@ class PostsController extends Controller
 {
     public function index()
     {
-        $posts = Post::with(['comments', 'tags'])->orderBy('created_at', 'desc')->get();
-        foreach($posts as $post){
-            foreach($post->tags as $tag){
-                echo($tag->tagname);
-            };
-        };
-        exit;
-
+        $posts = Post::with(['comments', 'tags'])->orderBy('created_at', 'desc')->paginate(10);
         return view('posts.index', [
             'posts' => $posts,
             ]);

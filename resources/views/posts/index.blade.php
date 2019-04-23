@@ -30,7 +30,15 @@
                             コメント {{ $post->comments->count() }}件
                         </span>　
                     @endif
-              
+
+                    @forelse ($post->tags as $tag)
+                        <span class="badge badge-secondary">
+                            {{ $tag->tagname }}
+                        </span>　
+                            
+                    @empty
+                        
+                    @endforelse
 
                 </div>
             </div>

@@ -55,7 +55,7 @@
                             </script>
                             <select class="js-example-basic-multiple form-controll" name="tags[]" multiple="multiple" style="width:50%;">
                                 @foreach ($tags as $tag)
-                                <option value="{{ $tag->tags_id }}">{{ $tag->tagname }}</option>
+                                <option value="{{ $tag->id }}">{{ $tag->tagname }}</option>
                                 @endforeach
                             </select>
                         </div>
