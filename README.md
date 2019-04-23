@@ -130,7 +130,9 @@ Schema::table('tags', function (Blueprint $table) {
 1. When Seeding does not work well....
    composer dump-autoload => Make ClassMap
 2. jQuery....See create.blade 
-3. Tinker... Debugging toot for Laravel.
+3. Tinker... Debugging tool for Laravel.
 ```
 $ composer require laravel/tinker
 ```
+4. paginate() and get() do not work as same
+5. 

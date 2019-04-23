@@ -30,10 +30,15 @@
                             コメント {{ $post->comments->count() }}件
                         </span>　
                     @endif
-                    @foreach ($post->tags as $tag)
-                        <span class="mr-2">{{ $tag->pivot->tagnames }} </span>
+
+                    @forelse ($post->tags as $tag)
+                        <span class="badge badge-secondary">
+                            {{ $tag->tagname }}
+                        </span>　
+                            
+                    @empty
                         
-                    @endforeach
+                    @endforelse
 
                 </div>
             </div>
