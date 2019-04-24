@@ -36,7 +36,7 @@
                     <input
                         name="post"
                         type="hidden"
-                        value="{{ $post->post }}"
+                        value="{{ $post->id }}"
                     >
                 
                     <div class="form-group">
