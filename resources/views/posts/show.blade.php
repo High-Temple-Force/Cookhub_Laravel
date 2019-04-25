@@ -34,9 +34,9 @@
                     @csrf
                 
                     <input
-                        name="post"
+                        name="post_id"
                         type="hidden"
-                        value="{{ $post->post }}"
+                        value="{{ $post->id }}"
                     >
                 
                     <div class="form-group">
