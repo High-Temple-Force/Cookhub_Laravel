@@ -34,7 +34,7 @@
                     @csrf
                 
                     <input
-                        name="post"
+                        name="post_id"
                         type="hidden"
                         value="{{ $post->id }}"
                     >
