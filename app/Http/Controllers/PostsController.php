@@ -45,20 +45,32 @@ class PostsController extends Controller
 
     public function edit($post_id)
     {
-        $post = Post::findOrFail($post_id);
+        $post = Post::with(['tags'])->findOrFail($post_id);
+        $alltags = Tag::all();
+        $selectedtags = [];
+        foreach($post->tags as $tag) {
+            $selectedtags[] = $tag->id;
+        };
         return view('posts.edit', [
             'post' => $post,
+            'alltags' => $alltags,
+            'tagid' => $selectedtags
         ]);
+
     }
 
     public function update($post_id, Request $request)
     {
+        
         $params = $request->validate([
             'title' => 'required|max:50',
             'hody'=> 'required|max:2000',
         ]);
-        $post = Post::findOrFail($post_id);
+        dd($request);
+        $post = Post::with(['tags'])->findOrFail($post_id); 
         $post->fill($params)->save();
+
+        $post->tags()->sync($request->tags);
         return redirect()->route('posts.show', ['post' => $post]);
     }
 

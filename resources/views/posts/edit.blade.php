@@ -47,7 +47,29 @@
                             </div>
                         @endif
                     </div>
-        
+
+                
+                    <div class="form-group">
+                        <label for="tags">
+                            タグ
+                        </label>
+                        <div >
+                            <script type="text/javascript">
+                                $(document).ready(function() {
+                                        $('.js-example-basic-multiple').select2({
+                                            tags: true,
+                                            
+                                        });
+                                });
+                            </script>
+                            <select class="js-example-basic-multiple form-controll" name="tags[]" multiple="multiple" style="width:50%;">
+                                @foreach ($alltags as $tag)
+                                <option value="{{ $tag->id }}"  {{ in_array($tag->id, $tagid, true) ? 'selected="selected"' : '' }}>{{ $tag->tagname }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                    </div>
+
                     <div class="mt-5">
                         <a class="btn btn-secondary" href="{{ route('posts.show', ['post' => $post]) }}">
                             キャンセル

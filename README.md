@@ -126,13 +126,19 @@ Schema::table('tags', function (Blueprint $table) {
       });
 ```
 
+### 10. Tag func
+Install Select2 of jQuery.
+To make tags selected, use selected option.
+In Many to Many relations, use SYNC method to update datas.
+Select2 , allowing users to add tags
+
 ### Tips
 1. When Seeding does not work well....
    composer dump-autoload => Make ClassMap
-2. jQuery....See create.blade 
+2. jQuery....See create.blade  Select2
 3. Tinker... Debugging tool for Laravel.
 ```
 $ composer require laravel/tinker
 ```
 4. paginate() and get() do not work as same
-5. 
+5. in_array... Check if a data exists in an array
