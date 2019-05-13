@@ -66,10 +66,8 @@ class PostsController extends Controller
             'title' => 'required|max:50',
             'hody'=> 'required|max:2000',
         ]);
-        dd($request);
         $post = Post::with(['tags'])->findOrFail($post_id); 
         $post->fill($params)->save();
-
         $post->tags()->sync($request->tags);
         return redirect()->route('posts.show', ['post' => $post]);
     }

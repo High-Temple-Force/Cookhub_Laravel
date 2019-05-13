@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post;
+use App\Tag;
 
 
 class TagController extends Controller
@@ -11,13 +12,10 @@ class TagController extends Controller
     public function store(Request $request)
     {
         $params = $request->validate([
-            'id' => 'required|exists:posts,id',
             'tagname' => 'required|max:20',
         ]);
-        $post = Post::findOrFail($params['posts_id']);
-        $post->tags()->create($params);
-
-        return redirect()->route('posts.show', ['post' => $post]);
+        Tag::firstOrCreate(['tagname' => $params]);
+        
     }
     
 }
