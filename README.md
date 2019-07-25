@@ -131,6 +131,7 @@ Install Select2 of jQuery.
 To make tags selected, use selected option.
 In Many to Many relations, use SYNC method to update datas.
 Select2 , allowing users to add tags
+firstOrCreate()
 
 ### Tips
 1. When Seeding does not work well....
