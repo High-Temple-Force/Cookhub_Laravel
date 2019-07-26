@@ -1,7 +1,8 @@
 @extends('layout')
 
 @section('content')
-    <div class="mb-4">
+    <br>
+    <div class="mb-4 container">
         <a href=" {{ route('posts.create') }} " class="btn btn-primary">
             投稿を新規作成する
         </a>

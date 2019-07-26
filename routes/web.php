@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+// use Symfony\Component\Routing\Annotation\Route;
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -12,7 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'PostsController@index')->name('top');
+Route::get('/{any?}', function () {
+    return view('index');
+
+})->where('any', '.+');
+
+// Route::get('/', 'PostsController@index')->name('top');
 Route::resource('posts', 'PostsController', ['only' => ['create', 'store', 'show', 'edit', 'update', 'destroy']]);
 Route::resource('comments', 'CommentsController', ['only' => ['store']]);
 Route::resource('tags', 'TagsController', ['only' => ['store']]);
